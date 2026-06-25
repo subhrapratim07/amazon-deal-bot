@@ -1,0 +1,28 @@
+.pipeline {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 24px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  gap: 4px;
+}
+.pipe-step {
+  flex: 1; text-align: center; min-width: 80px; padding: 4px 8px;
+  border-radius: var(--radius);
+  transition: background .2s;
+}
+.pipe-val {
+  font-size: 24px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text2);
+  letter-spacing: -0.02em;
+}
+.pipe-lbl { font-size: 11px; color: var(--text3); margin-top: 3px; font-weight: 500; }
+
+.pipe-step.highlight .pipe-val { color: var(--tg); }
+.pipe-step.highlight .pipe-lbl { color: var(--tg); }
+
+.pipe-arrow { color: var(--text3); flex-shrink: 0; }

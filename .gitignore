@@ -1,0 +1,28 @@
+# ── Secrets — NEVER upload these ─────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Node / React ─────────────────────────────────
+node_modules/
+build/
+react-build/
+
+# ── Python ────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+.venv/
+
+# ── OS / Editor junk ──────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# ── npm/yarn logs ─────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #080b12;
+  --surface: #0e1420;
+  --surface2: #141b28;
+  --surface3: #1c2438;
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.10);
+  --text: #dde3f0;
+  --text2: #8b94b0;
+  --text3: #555e78;
+  --green: #10d67e;
+  --green-dim: rgba(16,214,126,0.10);
+  --amber: #f0a429;
+  --amber-dim: rgba(240,164,41,0.10);
+  --red: #f05252;
+  --red-dim: rgba(240,82,82,0.10);
+  --blue: #4f8ef7;
+  --blue-dim: rgba(79,142,247,0.10);
+  --tg: #2aabee;
+  --tg-dim: rgba(42,171,238,0.10);
+  --tg-glow: rgba(42,171,238,0.18);
+  --radius: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --sidebar-w: 220px;
+}
+
+html, body, #root { height: 100%; }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+
+button { font-family: 'Inter', sans-serif; cursor: pointer; }
+input { font-family: 'Inter', sans-serif; }
+a { text-decoration: none; }

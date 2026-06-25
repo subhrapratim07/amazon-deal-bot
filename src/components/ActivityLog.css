@@ -1,0 +1,35 @@
+.log-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.log-panel.compact { max-height: 240px; overflow-y: auto; }
+
+.log-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+}
+.log-row:last-child { border-bottom: none; }
+
+.log-time {
+  color: var(--text3); min-width: 58px;
+  font-variant-numeric: tabular-nums;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+.log-icon { display: flex; align-items: center; flex-shrink: 0; }
+.log-msg  { color: var(--text2); flex: 1; }
+
+.level-success .log-icon { color: var(--green); }
+.level-warning .log-icon { color: var(--amber); }
+.level-error   .log-icon { color: var(--red); }
+.level-info    .log-icon { color: var(--blue); }
+
+.log-empty {
+  display: flex; align-items: center; gap: 8px;
+  padding: 20px 16px;
+  color: var(--text3); font-size: 13px;
+}
