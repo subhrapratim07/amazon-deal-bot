@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: amazon-deal-bot
+    env: python
+    plan: free
+    buildCommand: |
+      npm install
+      npm run build
+      pip install -r requirements.txt
+    startCommand: gunicorn server:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: RAPIDAPI_KEY
+        sync: false
+      - key: AMAZON_ASSOCIATE_TAG
+        sync: false
+      - key: AMAZON_COUNTRY
+        value: IN
+      - key: TELEGRAM_CHANNEL_ID
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
