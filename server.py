@@ -32,10 +32,10 @@ app           = Flask(__name__, static_folder=REACT_BUILD, static_url_path="")
 deal_store   = {}
 activity_log = []
 
-MAX_CALLS_PER_DAY = 3
-CALL_INTERVAL_H   = 24 / MAX_CALLS_PER_DAY   # 8 h
-MIN_DISCOUNT      = 5
-TARGET_TOTAL      = 1000   # stop after this many deals in store
+MAX_CALLS_PER_DAY = 2
+CALL_INTERVAL_H   = 85 / MAX_CALLS_PER_DAY   
+MIN_DISCOUNT      = 50
+TARGET_TOTAL      = 1500   # stop after this many deals in store
 
 fetch_state = {
     "last_fetch_time":  0,
@@ -45,8 +45,8 @@ fetch_state = {
 }
 
 auto_state = {
-    "enabled":        False,
-    "posts_per_day":  1000,
+    "enabled":      False,
+    "posts_per_day":  411,  # 411 posts = 1 post every 3.5 minutes
     "last_post_time": 0,
     "timer_thread":   None,
 }

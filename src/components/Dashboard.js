@@ -98,7 +98,7 @@ export default function Dashboard({
     ? `Next fetch in ${stats.next_fetch_in_h}h`
     : quotaExhausted ? 'Daily quota used' : 'Fetch new deals';
 
-  const intervalSec  = stats.interval_sec ?? Math.round(86400 / (stats.posts_per_day ?? 1000));
+  const intervalSec = stats.interval_sec ?? Math.round(86400 / (stats.posts_per_day ?? 411));
   const intervalDisp = intervalSec >= 60
     ? `${Math.round(intervalSec / 60)}m` : `${intervalSec}s`;
 
@@ -110,8 +110,8 @@ export default function Dashboard({
         <div>
           <h1 className="dash-title">Deal Dashboard</h1>
           <p className="dash-sub">
-            Fetch · Review · Auto-post {stats.posts_per_day ?? 1000} deals/day to Telegram
-          </p>
+  Fetch · Review · Auto-post {stats.posts_per_day ?? 411} deals/day to Telegram
+</p>
         </div>
         <div className="fetch-group">
           {/* Auto-Approve All button — shown when pending deals exist */}
@@ -171,7 +171,7 @@ export default function Dashboard({
       {autoMode && (
         <div className="autopost-strip">
           <Zap size={13} />
-          Auto-posting {stats.posts_per_day ?? 1000} deals/day
+          Auto-posting {stats.posts_per_day ?? 411} deals/day
           &nbsp;·&nbsp;1 post every {intervalDisp}
           {stats.last_post_ago_min != null && (
             <>&nbsp;·&nbsp;Last post {stats.last_post_ago_min}m ago</>

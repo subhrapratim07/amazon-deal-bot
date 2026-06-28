@@ -78,13 +78,12 @@ export default function Sidebar({ active, onNav, autoMode, intervalMin, onToggle
             value={interval}
             onChange={e => handleIntervalChange(Number(e.target.value))}
           >
-            <option value={15}>15 min</option>
-            <option value={30}>30 min</option>
-            <option value={60}>1 hour</option>
-            <option value={120}>2 hours</option>
-            <option value={180}>3 hours</option>
-            <option value={360}>6 hours</option>
-            <option value={720}>12 hours</option>
+            <option value={411}>3.5 min</option>
+  <option value={288}>5 min</option>
+  <option value={144}>10 min</option>
+  <option value={96}>15 min</option>
+  <option value={72}>20 min</option>
+  <option value={48}>30 min</option>
           </select>
         </div>
 
